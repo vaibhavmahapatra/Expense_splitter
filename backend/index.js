@@ -9,7 +9,7 @@ connectDB();
 app.use(cors({
   origin : [
     "http://localhost:5173",
-    "http://expense-splitter-omega-jet.vercel.app/"
+    "https://expense-splitter-omega-jet.vercel.app/"
   ],
   credentials: true
 }));
