@@ -6,7 +6,13 @@ const connectDB = require("./config/db");
 const app = express();
 connectDB();
 
-app.use(cors());
+app.use(cors({
+  origin : [
+    "http://localhost:5173",
+    "http://expense-splitter-omega-jet.vercel.app/"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use("/auth", require("./routes/auth"));
